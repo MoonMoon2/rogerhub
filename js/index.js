@@ -1,11 +1,3 @@
-//declaring variables
-var classGrade;
-var desiredGrade;
-var examWeight;
-var examWeight;
-var classWeight;
-var examGrade;
-
 //checking if values are missing
 function valuesInputted(){
     if(classGrade.length == 0 || desiredGrade.length == 0 || examWeight.length == 0){
@@ -29,18 +21,26 @@ function valuesValid(){
 //if all conditions are met, calculates value and displays it
 //also notifies user if values are missing or invalid
 function crunchNumbers(){
+
+    // Declare and assign variables to html input text area
+    var classGrade = document.getElementById("classGrade").value;
+    var desiredGrade = document.getElementById("desiredGrade").value;
+    var examWeight = document.getElementById("examWeight").value;
+    console.log(classGrade + ", " + desiredGrade + ", " + examWeight)
     if(valuesInputted()){
         if(valuesValid()){
-            calssWeight = 1 - (examWeight/100);
-            examGrade = ((desiredGrade - (classGrade * classWeight)) / examWeight) * 100;
-            print("You need a " + String(examGrade.toFixed(2)) + "% on your final exam to achieve your desired grade.");
+            //
+            var classWeight = 1 - (examWeight/100);
+            var examGrade = ((desiredGrade - (classGrade * classWeight)) / examWeight) * 100;
+            console.log(examGrade)
+            document.getElementById("examGrade").value = ("You need a " + String(examGrade.toFixed(2)) + "% on your final exam to achieve your desired grade.");
         }
         else{
-            print("Please enter valid values in the boxes.")
+            console.log("Please enter valid values in the boxes.")
         }
     }
     else{
-        print("Please populate all the boxes.")
+        console.log("Please populate all the boxes.")
     }
 }
 

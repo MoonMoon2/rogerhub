@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/index.js"></script>
+    </head>
 
-<body>
-    
-</body>
+    <body>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>Current Course Grade</div><textarea id="classGrade" placeholder="Percentage you have"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Current Grade</div><textarea id="desiredGrade" placeholder="Percentage you want"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Current Grade</div><textarea id="examWeight" placeholder="Weighting of course compared to regards"></textarea>
+                        </td>
+                    </tr>
+                    <tr><button onclick="crunchNumbers()"></button></tr>
+                    <tr>
+                        <td>
+                            <div id="examGrade"></div>
+                <tbody>
+        </div>
+    </body>
 
 </html>
