@@ -1,4 +1,4 @@
-Application for FRC scouting. Written using [Electron](http://electron.atom.io/) for easy customization.
+Written using [Electron](http://electron.atom.io/) for easy customization.
 
 ## Development dependencies
 * [Node.js](https://nodejs.org)
